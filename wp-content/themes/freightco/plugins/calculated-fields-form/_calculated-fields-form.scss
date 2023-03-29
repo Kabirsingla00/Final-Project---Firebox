@@ -1,0 +1,22 @@
+/* Calculated Fields Form styles
+----------------------------------------------------------------- */
+
+form[id^="cp_calculatedfieldsf"] input[type="radio"],
+form[id^="cp_calculatedfieldsf"] input[type="checkbox"] {
+	display:inline;
+}
+
+.cff-dropdown-field .dfield select {
+	visibility: visible;
+}
+
+.cp_cff_professional #fbuilder .select_container {
+	width: 50%;
+}
+.cp_cff_professional #fbuilder .select_container select {
+	width: 99% !important;
+}
+
+form #fbuilder .top_aligned .fields .dfield {
+	padding-top: 0;
+}

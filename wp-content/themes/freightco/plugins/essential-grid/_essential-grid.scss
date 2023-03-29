@@ -1,0 +1,69 @@
+/* Essential Grid styles
+----------------------------------------------------------------- */
+
+.esg-grid i[class*="eg-icon-"] {
+	color: #fff;
+	@include transition-color(.5s);
+}
+.esg-grid a:hover i[class*="eg-icon-"] {
+	color: #888;
+}
+.esg-navigationbutton i[class*="eg-icon-"] {
+	color: #888;
+}
+.esg-navigationbutton:hover i[class*="eg-icon-"] {
+	color: #333;
+}
+
+.esg-starring {
+	vertical-align: top;
+}
+.esg-starring .star-rating, .esg-starring-page .star-rating {
+	width: 6em;
+}
+
+.flat-light .esg-filters .esg-sortbutton-order,
+.flat-light .esg-filters .esg-cartbutton-order {
+	line-height:36px;
+	margin:0;
+}
+.flat-light .esg-filters .esg-sortbutton {
+	padding-right: 0;
+}
+
+.esgbox-overlay {
+	z-index: 228010 !important;
+}
+.esgbox-opened {
+	z-index: 228030 !important;
+}
+
+.eg-theme-skin-1-element-16:before,
+.eg-theme-skin-1-element-11:before,
+.eg-theme-skin-2-element-16:before,
+.eg-theme-skin-2-element-11:before {
+	font-family: $theme_icons;
+    font-size: 13px;
+    font-weight: 400;
+    margin-right: 6px;
+	position: relative;
+    bottom: 1px;    
+}
+.eg-theme-skin-1-element-11:before,
+.eg-theme-skin-2-element-11:before {
+	content: '\e973';
+}
+.eg-theme-skin-1-element-16:before,
+.eg-theme-skin-2-element-16:before {
+	content: '\e961';
+}
+
+.eg-theme-skin-2-element-10:after,
+.eg-theme-skin-1-element-10:after {
+	content: '\e988';
+	font-family: $theme_icons;
+	font-size: 3px;
+	line-height: 1;
+	display: block;
+	margin-top: 25px;
+}

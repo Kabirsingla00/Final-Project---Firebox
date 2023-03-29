@@ -1,0 +1,77 @@
+/* MailChimp for WP styles
+----------------------------------------------------------------- */
+form.mc4wp-form {
+	position:relative;
+}
+form.mc4wp-form .mc4wp-form-fields input[type="email"] {
+	width: 100%;
+	vertical-align:top;
+	@include border-box;
+}
+form.mc4wp-form .mc4wp-form-fields input[type="submit"] {
+}
+
+form.mc4wp-form .mc4wp-alert {
+	margin: 0 23.5% 2em 6.3%;
+	padding: 0.5em 1em;
+	line-height:1.5em;
+	@include border-radius(3px);
+}
+form.mc4wp-form p{
+	margin-bottom: 0;
+}
+
+form.mc4wp-form .mc4wp-form-fields > div > p {
+	margin-bottom: 0;
+}
+form.mc4wp-form .mc_with_padding {
+	padding: 2.75em 11.8em 2.5em 3em;
+	overflow: hidden;
+	position: relative;
+}
+form.mc4wp-form .form_title_2color{
+	@include font(2.188em,1em,600);
+	margin-bottom: 0.65em;
+}
+form.mc4wp-form .form_title_2color:after {
+	content: '\e988';
+	font-family: $theme_icons;
+	font-size: 3px;
+	line-height: 1;
+	display: block;
+	margin-top: 1.6rem;
+}
+form.mc4wp-form .form_icon_abs {
+	@include font(13.5em,1em);
+	@include abs-rb(-0.435em,0.05em);
+}
+
+form.mc4wp-form .mc4wp-form-fields * + .form_input {
+	margin-top: 1.5em;
+}
+form.mc4wp-form .mc4wp-form-fields * + .form_button {
+	margin-top: 0.9em;
+}
+
+form.mc4wp-form div.mcfwp-agree-input{
+  position: relative;
+  padding-left: 1.5em;
+  text-align: left;
+  line-height: 1.5em;
+  margin-top: 0.5em;
+}
+
+form.mc4wp-form input[name="i_agree_privacy_policy"]{
+  display: none;
+}
+
+form.mc4wp-form input[type="checkbox"] + span:before{
+  top:0;
+  -webkit-transform: translateY(30%);
+  -ms-transform: translateY(30%);
+  transform: translateY(30%);
+}
+
+.mc4wp-form label.mcfwp-agree-input{
+  color: #fff!important;
+}

@@ -1,0 +1,154 @@
+/* Icons */
+.sc_icons {
+	position: relative;	
+	padding-top: 0.0001px;
+}
+
+.sc_icons_columns_wrap {
+	@include flex;
+	@include flex-wrap(wrap);
+}
+.sc_icons_slider .sc_icons_item,
+.sc_icons_columns_wrap .sc_icons_item {
+	display:inline-block;
+	vertical-align:top;
+	@include box(100%, 100%);
+	@include border-box;
+}
+.sc_icons_slider .sc_icons_item {
+//	height: 95%;
+	margin-bottom: 0 !important;
+}
+
+
+.sc_icons .sc_icons_item {
+	position:relative;
+}
+.sc_icons.sc_align_left .sc_icons_item { text-align:left; }
+.sc_icons.sc_align_center .sc_icons_item { text-align:center; }
+.sc_icons.sc_align_right .sc_icons_item { text-align:right; }
+
+.sc_icons .sc_icons_item > * {
+	margin:0;
+}
+
+.sc_icons .sc_icons_image img {
+	max-width: 75%;
+}
+
+.sc_icons .sc_icons_icon {
+	color: #efa758;
+	display:inline-block;
+	width: auto;
+}
+.sc_icons:not(.sc_icons_number) .sc_icons_icon {
+	@include abs-rb(-4.1em,1.35em);
+}
+.sc_icon_type_svg {
+	visibility:hidden;
+}
+.sc_icon_type_svg svg {
+	fill: none !important;
+	stroke: currentColor !important;
+	@include transition-all;
+}
+.sc_icons .sc_icons_icon:before,
+.sc_icons .sc_icons_icon > span:before {
+	@include font(6rem, 1em);
+}
+.sc_icon_type_svg svg {
+	@include box(6em, 6em);
+}
+.sc_icons_size_small .sc_icons_icon:before,
+.sc_icons_size_small .sc_icons_icon > span:before {
+	@include font(4rem, 1.1em);
+}
+.sc_icons_size_small .sc_icon_type_svg svg {
+	@include box(4em, 4em);
+}
+.sc_icons_size_large .sc_icons_icon:before,
+.sc_icons_size_large .sc_icons_icon > span:before {
+	@include font(10.15rem, 1em);
+}
+.sc_icons_size_large .sc_icon_type_svg svg {
+	@include box(8em, 8em);
+}
+.sc_icons .sc_icons_icon > span {
+	display:inline-block;
+	opacity: 0;
+	@include abs-lt;
+	width: auto;
+}
+.sc_icons .sc_icons_icon,
+.sc_icons .sc_icons_item_title {
+	@include transition-all;
+}
+.sc_icons .sc_icons_icon + .sc_icons_item_title,
+.sc_icons .sc_icons_icon + .sc_icons_item_description {
+}
+.sc_icons .sc_icons_image + .sc_icons_item_title,
+.sc_icons .sc_icons_image + .sc_icons_item_description {
+}
+.sc_icons .sc_icons_item_description > span {
+	display:block;
+}
+.sc_icons .sc_icons_item_description > span + span{
+	margin-top: 4.95px;
+	padding-top: 0.05px;
+}
+.sc_icons .sc_icons_item_description {
+	line-height: 1.76em;
+}
+.sc_icons .sc_icons_item_description span {
+}
+.sc_icons_item_title {
+	line-height: 1em;
+}
+.sc_icons_item_description {
+	@include font(1em, 1.6em);
+}
+.sc_icons_item_title + .sc_icons_item_description {
+	margin-top: 1.1em;
+}
+.sc_icons .sc_icons_item_link {
+	display:block;
+	@include abs-lt(0, 0, 10);
+	@include box(100%, 100%);
+}
+
+/* Style Modern */
+.sc_icons_modern .sc_icons_item_description {
+	font-weight: normal;;
+	color: #292929;
+}
+
+/* Hover effects */
+.sc_icons .sc_icons_item_linked .sc_icons_icon + .sc_icons_item_title,
+.sc_icons .sc_icons_item_linked .sc_icons_image + .sc_icons_item_title,
+.sc_icons .sc_icons_item_linked .sc_icons_icon + .sc_icons_item_description,
+.sc_icons .sc_icons_item_linked .sc_icons_icon + .sc_icons_item_title + .sc_icons_item_description,
+.sc_icons .sc_icons_item_linked .sc_icons_image + .sc_icons_item_description,
+.sc_icons .sc_icons_item_linked .sc_icons_image + .sc_icons_item_title + .sc_icons_item_description,
+.sc_icons .sc_icons_item_linked .sc_icons_image img {
+	@include transition-all(.25s);
+}
+.sc_icons .sc_icons_item_linked .sc_icons_icon + .sc_icons_item_title,
+.sc_icons .sc_icons_item_linked .sc_icons_image + .sc_icons_item_title {
+	@include transform-origin(center bottom);
+}
+.sc_icons .sc_icons_item_linked .sc_icons_icon + .sc_icons_item_description,
+.sc_icons .sc_icons_item_linked .sc_icons_icon + .sc_icons_item_title + .sc_icons_item_description,
+.sc_icons .sc_icons_item_linked .sc_icons_image + .sc_icons_item_description,
+.sc_icons .sc_icons_item_linked .sc_icons_image + .sc_icons_item_title + .sc_icons_item_description {
+	@include transform-origin(center top);
+}
+
+@-webkit-keyframes icons-zoom {
+  0% {		opacity: 1;  }
+  100% {	opacity: 0;	@include scale(1.75, 1.75);  }
+}
+
+@keyframes icons-zoom {
+  0% {		opacity: 1;  }
+  100% {	opacity: 0;	@include scale(1.75, 1.75);  }
+}
